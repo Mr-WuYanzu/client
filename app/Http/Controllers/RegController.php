@@ -13,8 +13,17 @@ class RegController extends Controller
     }
     //注册执行
     public function regdo(Request $request){
-        $data=$request->all();
-        unset($data['_token']);
+        $user_name=$request->user_name()??'';
+        $email=$request->email()??'';
+        $password=$request->password()??'';
+        if(empty($user_name)||empty($email)||empty($password)){
+            die('缺少参数');
+        }
+        $data=[
+            'user_name'=>$user_name,
+            'email'=>$email,
+            'password'=>$password
+        ];
         $data=json_encode($data,JSON_UNESCAPED_UNICODE);
         $str=$this->encrypt($data);
         $url='http://api.1809a.com/reg';

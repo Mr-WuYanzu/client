@@ -38,6 +38,8 @@ class RegController extends Controller
         curl_close($ch);
         if($res->errno==0){
             return redirect('http://client.1809a.com/login');
+        }else{
+            dd($response);
         }
 
     }

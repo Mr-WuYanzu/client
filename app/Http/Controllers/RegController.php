@@ -16,6 +16,7 @@ class RegController extends Controller
         $user_name=$request->user_name??'';
         $email=$request->email??'';
         $password=$request->password??'';
+        echo $user_name;
         if(empty($user_name)||empty($email)||empty($password)){
             die('缺少参数');
         }

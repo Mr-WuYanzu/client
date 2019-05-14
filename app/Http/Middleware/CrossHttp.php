@@ -13,27 +13,15 @@ class CrossHttp
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next)
-    {
-        if($request->getMethod() == "OPTIONS") {
-            $allowOrigin = [
-                'http://120.79.58.173',
-                'http://localhost',
-            ];
-            $Origin = $request->header("Origin");
-            if(in_array($Origin, $allowOrigin)){
-                return response()->json('ok', 200, [
-                    # 下面参数视request中header而定
-                    'Access-Control-Allow-Origin' => $Origin,
-                    'Access-Control-Allow-Headers' => 'x-token',
-                    'Access-Control-Allow-Methods' => 'GET,POST,OPTIONS']);
-            } else {
-                return response()->json('fail', 405);
-            }
-        }
-
+    public function handle($request, Closure $next) {
         $response = $next($request);
-        $response->header('Access-Control-Allow-Origin', '*');
+        $response->header('Access-Control-Allow-Origin', '*'); //允许所有资源跨域
+        $response->header('Access-Control-Allow-Headers', 'Origin, Content-Type, Cookie, Accept, Authorization, application/json , X-Auth-Token');//允许通过的响应报头
+        $response->header('Access-Control-Allow-Methods', 'GET, POST, PATCH, PUT, OPTIONS, DELETE');//允许的请求方法
+        $response->header('Access-Control-Expose-Headers', 'Authorization');//允许axios获取响应头中的Authorization
+        $response->header('Allow', 'GET, POST, PATCH, PUT, OPTIONS, delete');//允许的请求方法
+        $response->header('Access-Control-Allow-Credentials', 'true');//运行客户端携带证书式访问
         return $response;
     }
+
 }

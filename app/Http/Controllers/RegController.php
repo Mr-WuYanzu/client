@@ -18,7 +18,11 @@ class RegController extends Controller
         $email=$request->email??'';
         $password=$request->password??'';
         if(empty($user_name)||empty($email)||empty($password)){
-            die('缺少参数');
+            $response=[
+                'errno'=>'42001',
+                'msg'=>'缺少参数'
+            ];
+            return json_encode($response,JSON_UNESCAPED_UNICODE);die;
         }
         $data=[
             'user_name'=>$user_name,

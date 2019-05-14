@@ -17,7 +17,7 @@ return [
     'allowedOriginsPatterns' => [],
     'allowedHeaders' => ['*'],
     'allowedMethods' => ['*'],
-    'exposedHeaders' => [],
-    'maxAge' => 10,
+    'exposedHeaders' => ['*'],
+    'maxAge' => 0,
 
 ];

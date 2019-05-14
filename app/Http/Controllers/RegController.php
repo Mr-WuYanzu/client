@@ -36,7 +36,7 @@ class RegController extends Controller
         $response=curl_exec($ch);
         $res=json_decode($response);
         curl_close($ch);
-        if($res->errno==0){
+        if($res['errno']==0){
             return redirect('http://client.1809a.com/login');
         }
 

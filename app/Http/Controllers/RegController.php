@@ -37,8 +37,11 @@ class RegController extends Controller
         $response=curl_exec($ch);
         $res=json_decode($response);
         curl_close($ch);
-        return $res;
-
+        if($res->errno==0){
+            return redirect('http://client.1809a.com/login');
+        }else{
+            dd($response);
+        }
 
     }
     //登录页面

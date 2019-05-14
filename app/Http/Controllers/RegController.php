@@ -38,7 +38,7 @@ class RegController extends Controller
         $res=json_decode($response);
         curl_close($ch);
 
-            return $res;
+         dd($res);
 
 
     }

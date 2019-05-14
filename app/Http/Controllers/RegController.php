@@ -16,7 +16,6 @@ class RegController extends Controller
         $user_name=$request->user_name??'';
         $email=$request->email??'';
         $password=$request->password??'';
-        echo $user_name;
         if(empty($user_name)||empty($email)||empty($password)){
             die('缺少参数');
         }
@@ -27,7 +26,7 @@ class RegController extends Controller
         ];
         $data=json_encode($data,JSON_UNESCAPED_UNICODE);
         $str=$this->encrypt($data);
-        $url='http://api.1809a.com/reg';
+        $url='http://api.zhbcto.com/reg';
         $ch=curl_init();
         curl_setopt($ch,CURLOPT_URL,$url);
         curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
@@ -35,7 +34,6 @@ class RegController extends Controller
         curl_setopt($ch,CURLOPT_POSTFIELDS,$str);
         curl_setopt($ch,CURLOPT_HTTPHEADER,['Content-Type:text/plain']);
         $response=curl_exec($ch);
-        dd($response);
         $res=json_decode($response);
         curl_close($ch);
         if($res->errno==0){

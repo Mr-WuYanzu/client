@@ -42,8 +42,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/RegController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+            <state relative-caret-position="551">
+              <caret line="38" column="24" lean-forward="true" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
               </folding>
@@ -219,17 +219,6 @@
               <item name="client_1809" type="b2602c69:ProjectViewProjectNode" />
               <item name="client_1809" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="client_1809" type="b2602c69:ProjectViewProjectNode" />
-              <item name="client_1809" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="client_1809" type="b2602c69:ProjectViewProjectNode" />
-              <item name="client_1809" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -293,16 +282,15 @@
       <workItem from="1557474771375" duration="8805000" />
       <workItem from="1557708575287" duration="5632000" />
       <workItem from="1557714668776" duration="10429000" />
-      <workItem from="1557799279515" duration="7991000" />
+      <workItem from="1557799279515" duration="8375000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36444000" />
+    <option name="totallyTimeSpent" value="36828000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24128686" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -398,8 +386,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/RegController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+        <state relative-caret-position="551">
+          <caret line="38" column="24" lean-forward="true" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>

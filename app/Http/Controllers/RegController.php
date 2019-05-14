@@ -13,6 +13,7 @@ class RegController extends Controller
     }
     //注册执行
     public function regdo(Request $request){
+        header('Access-Control-Allow-Origin:*');
         $user_name=$request->user_name??'';
         $email=$request->email??'';
         $password=$request->password??'';

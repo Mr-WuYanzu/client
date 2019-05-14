@@ -35,6 +35,7 @@ class RegController extends Controller
         curl_setopt($ch,CURLOPT_POSTFIELDS,$str);
         curl_setopt($ch,CURLOPT_HTTPHEADER,['Content-Type:text/plain']);
         $response=curl_exec($ch);
+        dd($response);
         $res=json_decode($response);
         curl_close($ch);
         if($res->errno==0){
